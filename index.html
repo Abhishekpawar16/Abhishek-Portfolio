@@ -37,11 +37,109 @@
       padding-top: 4rem;
       padding-bottom: 4rem;
     }
-    .about-mf .about-img {
-      margin-bottom: 2rem;
+    .about-img-circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 4px solid #ffbd39;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 8px 30px rgba(255,189,57,0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
-    .about-mf .about-img img {
-      margin-left: 10px;
+    .about-img-circle:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 40px rgba(255,189,57,0.4);
+    }
+    .about-profile-card {
+      text-align: center;
+    }
+    .about-profile-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .about-profile-title {
+      font-size: 1.1rem;
+      color: #ffbd39;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .about-profile-location {
+      font-size: 0.9rem;
+      color: #999;
+      margin-bottom: 20px;
+    }
+    .about-profile-location .ion-ios-pin {
+      color: #ffbd39;
+      margin-right: 4px;
+    }
+    .about-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 20px;
+      margin-top: 20px;
+    }
+    .about-info-item {
+      font-size: 0.88rem;
+    }
+    .about-info-item .info-label {
+      color: #ffbd39;
+      font-weight: 600;
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+    .about-info-item .info-value {
+      color: #ccc;
+    }
+    .projects-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffbd39, #ff9500);
+      color: #000;
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin: 20px auto 10px auto;
+      box-shadow: 0 6px 25px rgba(255,189,57,0.3);
+    }
+    .projects-badge-text {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #999;
+    }
+    .about-social-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .about-social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,189,57,0.15);
+      color: #ffbd39;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,189,57,0.2);
+    }
+    .about-social-links a:hover {
+      background: #ffbd39;
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255,189,57,0.3);
     }
 
     /* ---- Skills ---- */
@@ -476,6 +574,38 @@
     body.light-mode .progress {
       background-color: rgba(0,0,0,0.06) !important;
     }
+    body.light-mode .about-profile-name {
+      color: #1a1a2e !important;
+    }
+    body.light-mode .about-profile-location {
+      color: #777 !important;
+    }
+    body.light-mode .about-info-item .info-value {
+      color: #555 !important;
+    }
+    body.light-mode .projects-badge-text {
+      color: #777 !important;
+    }
+    body.light-mode .about-img-circle {
+      border-color: #e6a800 !important;
+      box-shadow: 0 8px 30px rgba(230,168,0,0.15) !important;
+    }
+    body.light-mode .about-social-links a {
+      background: rgba(230,168,0,0.1) !important;
+      color: #d48f00 !important;
+      border-color: rgba(230,168,0,0.2) !important;
+    }
+    body.light-mode .about-social-links a:hover {
+      background: #e6a800 !important;
+      color: #fff !important;
+    }
+    body.light-mode .hire-me-section {
+      background: #f5f5f7 !important;
+    }
+    body.light-mode .hire-me-section h2,
+    body.light-mode .hire-me-section h4 {
+      color: #1a1a2e !important;
+    }
     </style>
   </head>
 
@@ -554,64 +684,35 @@
     <!-- ====== ABOUT SECTION ====== -->
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
       <div class="container">
-        <div class="row">
-          <div class="row d-flex align-items-stretch">
-            <div class="col-md-6 col-lg-5 d-flex">
-              <div class="img-about img d-flex align-items-stretch">
-                <div class="overlay">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="images/profile-casual.png" data-portfolio="about-image"
-                             class="img-fluid rounded b-shadow-a" alt="Abhishek Pawar">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span data-portfolio="name">Abhishek Pawar</span></p>
-                        <p><span class="title-s">Job Role: </span> <span data-portfolio="title">Data Analyst</span></p>
-                        <p><span class="title-s">Address: </span> <span data-portfolio="location">Indore, India</span></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="skill-mf" id="portfolio-skills">
-                    <!-- Dynamically rendered from data.json -->
-                  </div>
-                </div>
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big">About</h1>
+            <h2 class="mb-4">About Me</h2>
+            <p style="color: #999; font-size: 1.05em; max-width: 600px; margin: 0 auto;">
+              A brief introduction about myself and my professional journey
+            </p>
+          </div>
+        </div>
+        <div class="row d-flex align-items-stretch">
+          <!-- LEFT: Profile Card -->
+          <div class="col-md-5 col-lg-4 d-flex">
+            <div class="about-profile-card w-100" id="portfolio-about-card">
+              <!-- Dynamically rendered from data.json -->
+            </div>
+          </div>
+          <!-- RIGHT: Bio + Skills -->
+          <div class="col-md-7 col-lg-8 pl-lg-5 pb-5">
+            <div class="row justify-content-start pb-3">
+              <div class="col-md-12 heading-section ftco-animate">
+                <h2 class="mb-4" style="font-size: 1.8rem;">About Me</h2>
+                <p data-portfolio="bio" style="font-size: 1rem; line-height: 1.8; color: #bbb;"></p>
+                <ul class="about-info mt-4 px-md-0 px-2" id="portfolio-about-info">
+                  <!-- Dynamically rendered from data.json -->
+                </ul>
               </div>
             </div>
-
-            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-              <div class="row justify-content-start pb-3">
-                <div class="col-md-12 heading-section ftco-animate">
-                  <h1 class="big">About</h1>
-                  <h2 class="mb-4">About Me</h2>
-                  <p data-portfolio="bio">
-                    I am Abhishek Pawar, a passionate and results-driven Data Science Enthusiast...
-                  </p>
-                  <ul class="about-info mt-4 px-md-0 px-2" id="portfolio-about-info">
-                    <!-- Dynamically rendered from data.json -->
-                  </ul>
-                </div>
-              </div>
-
-              <div class="counter-wrap ftco-animate d-flex mt-md-3">
-                <div class="text">
-                  <p class="mb-4">
-                    <span class="number" data-portfolio="projects-count" data-number="10">10</span>
-                    <span>+</span>
-                    <span>&nbsp; Projects completed</span>
-                  </p>
-                  <p>
-                    <a href="https://www.linkedin.com/in/abhishek-pawar994/"
-                       data-portfolio="linkedin" class="btn btn-primary py-3 px-3">LinkedIn</a>
-                    <a href="https://github.com/Abhishekpawar16"
-                       data-portfolio="github" class="btn btn-secondary py-3 px-3"
-                       target="_blank" rel="noopener noreferrer">GitHub</a>
-                  </p>
-                </div>
-              </div>
+            <div class="skill-mf" id="portfolio-skills">
+              <!-- Dynamically rendered from data.json -->
             </div>
           </div>
         </div>
@@ -735,7 +836,7 @@
         </div>
       </div>
 
-      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+      <div class="ftco-section ftco-hireme img margin-top hire-me-section" style="background-color: #0d0d1a; background-image: none;">
         <div class="row justify-content-center">
           <div class="col-md-7 ftco-animate text-center">
             <h2>More projects on <span>GitHub</span></h2>
@@ -743,7 +844,7 @@
               <h4>I love to solve business problems &amp; uncover hidden data stories</h4>
               <br>
               <p>
-                <a href="https://github.com/Abhishekpawar16" data-portfolio="github"
+                <a href="#" data-portfolio="github"
                    class="btn btn-primary py-3 px-5" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>

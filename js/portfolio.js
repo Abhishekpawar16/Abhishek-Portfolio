@@ -26,23 +26,42 @@ function renderAll() {
   setText('[data-portfolio="hero-subtitle"]', p.profile.subtitle);
   setAttr('[data-portfolio="hero-image"]', 'style', `background-image:url(${p.profile.heroImage});`);
 
-  // ---- About Section ----
-  setText('[data-portfolio="name"]', p.profile.name);
-  setText('[data-portfolio="title"]', p.profile.title);
-  setText('[data-portfolio="location"]', p.profile.location);
-  setText('[data-portfolio="bio"]', p.profile.bio);
-  setAttr('[data-portfolio="about-image"]', 'src', p.profile.aboutImage);
-  setAttr('[data-portfolio="about-image"]', 'alt', p.profile.name);
-  setAttr('[data-portfolio="projects-count"]', 'data-number', p.profile.projectsCount);
-  setText('[data-portfolio="projects-count"]', p.profile.projectsCount);
+  // ---- About Section - Profile Card (LEFT) ----
+  const aboutCard = document.getElementById('portfolio-about-card');
+  if (aboutCard) {
+    const socialLinksHTML = p.socialLinks ? p.socialLinks.map(link =>
+      `<a href="${link.url}" target="_blank" rel="noopener noreferrer" title="${link.platform}">
+        <span class="${link.icon}"></span>
+      </a>`
+    ).join('') : '';
 
-  // About Info List
-  const aboutInfoEl = document.getElementById('portfolio-about-info');
-  if (aboutInfoEl && p.profile.aboutInfo) {
-    aboutInfoEl.innerHTML = p.profile.aboutInfo.map(info =>
-      `<li><span class="title-s">${info.label}: </span> <span>${info.value}</span></li>`
-    ).join('');
+    const aboutInfoHTML = p.profile.aboutInfo ? p.profile.aboutInfo.map(info =>
+      `<div class="about-info-item">
+        <span class="info-label">${info.label}</span>
+        <span class="info-value">${info.value}</span>
+      </div>`
+    ).join('') : '';
+
+    aboutCard.innerHTML = `
+      <img src="${p.profile.aboutImage}" alt="${p.profile.name}" class="about-img-circle">
+      <div class="about-profile-name">${p.profile.name}</div>
+      <div class="about-profile-title">${p.profile.title}</div>
+      <div class="about-profile-location">
+        <span class="ion-ios-pin"></span> ${p.profile.location}
+      </div>
+      <div class="about-info-grid">
+        ${aboutInfoHTML}
+      </div>
+      <div class="projects-badge">${p.profile.projectsCount}+</div>
+      <div class="projects-badge-text">Projects Completed</div>
+      <div class="about-social-links">
+        ${socialLinksHTML}
+      </div>
+    `;
   }
+
+  // ---- About Section - Bio (RIGHT) ----
+  setText('[data-portfolio="bio"]', p.profile.bio);
 
   // ---- Skills ---- (rendered as radar chart image for visual appeal)
   const skillsEl = document.getElementById('portfolio-skills');
