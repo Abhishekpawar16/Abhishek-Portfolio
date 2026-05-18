@@ -1,480 +1,708 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Abhishek Pawar </title>
+    <title>Abhishek Pawar | Data Analyst</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta name="description" content="Abhishek Pawar — Data Analyst portfolio. Skilled in SQL, Python, Machine Learning, Power BI, and data-driven decision making.">
+    <meta name="keywords" content="Data Analyst, SQL, Python, Machine Learning, Power BI, Portfolio">
+    <meta name="author" content="Abhishek Pawar">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Abhishek Pawar | Data Analyst">
+    <meta property="og:description" content="Data Analyst portfolio — SQL, Python, ML, Power BI">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/profile-pro.png">
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+    /* ========================================
+       PORTFOLIO CUSTOM STYLES
+       ======================================== */
 
+    /* ---- About Section ---- */
+    .about-mf .box-shadow-full {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .about-mf .about-img {
+      margin-bottom: 2rem;
+    }
+    .about-mf .about-img img {
+      margin-left: 10px;
+    }
 
-<style>
+    /* ---- Skills ---- */
+    .skill-mf .progress {
+      margin: .5rem 0 1.2rem 0;
+      border-radius: 4px;
+      height: .7rem;
+      background-color: rgba(255, 189, 57, 0.15);
+      overflow: hidden;
+    }
+    .skill-mf .progress .progress-bar {
+      height: .7rem;
+      background: linear-gradient(90deg, #ffbd39, #ff9500);
+      border-radius: 4px;
+      transition: width 1.2s ease-in-out;
+    }
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+    /* ---- Typing Animation ---- */
+    #typing-animation {
+      font-size: 30px;
+      font-weight: bold;
+      color: #ffbd39;
+      min-height: 40px;
+    }
+    #typing-animation .typed-cursor {
+      color: #ffbd39;
+      font-weight: 100;
+    }
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+    /* ---- Zoom Effect ---- */
+    .zoom-effect {
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .zoom-effect:hover {
+      transform: scale(1.08);
+    }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+    /* ---- Technologies Section ---- */
+    #technologies {
+      background-color: #000;
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+    }
+    #portfolio-technologies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .tech-card {
+      background: rgba(255,255,255,0.06);
+      padding: 30px 20px;
+      border-radius: 15px;
+      width: 150px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    .tech-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.12);
+      box-shadow: 0 8px 25px rgba(255, 189, 57, 0.15);
+      border-color: rgba(255,189,57,0.3);
+    }
+    .tech-card img {
+      height: 50px;
+      margin-bottom: 15px;
+      filter: brightness(0.9);
+      transition: filter 0.3s ease;
+    }
+    .tech-card:hover img {
+      filter: brightness(1.1);
+    }
+    .tech-card span {
+      font-weight: 600;
+      color: #ccc;
+      display: block;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+    /* ---- Project Filters ---- */
+    .project-filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .project-filter-btn {
+      padding: 8px 24px;
+      border: 2px solid rgba(255,189,57,0.4);
+      border-radius: 30px;
+      background: transparent;
+      color: #999;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+    .project-filter-btn:hover,
+    .project-filter-btn.active {
+      background: #ffbd39;
+      color: #000;
+      border-color: #ffbd39;
+      box-shadow: 0 4px 15px rgba(255,189,57,0.3);
+    }
 
+    /* ---- Project Tags ---- */
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .project-tag {
+      background: rgba(255,189,57,0.12);
+      color: #ffbd39;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .btn-github {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      color: #aaa;
+      font-size: 0.85rem;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+    .btn-github:hover {
+      color: #ffbd39;
+    }
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
+    /* ---- Testimonials section removed ---- */
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
+    /* ---- Dark Mode Toggle ---- */
+    #dark-mode-toggle {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      z-index: 999;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #1a1a2e;
+      border: 2px solid rgba(255,189,57,0.3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+    #dark-mode-toggle:hover {
+      transform: scale(1.1);
+      border-color: #ffbd39;
+      box-shadow: 0 4px 20px rgba(255,189,57,0.3);
+    }
+    .toggle-icon {
+      font-size: 1.4rem;
+    }
 
+    /* ---- Scroll to Top ---- */
+    #scroll-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffbd39, #ff9500);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(255,165,0,0.3);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+    }
+    #scroll-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    #scroll-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(255,165,0,0.5);
+    }
+    #scroll-to-top svg {
+      width: 20px;
+      height: 20px;
+      fill: #000;
+    }
 
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
+    /* ---- Navbar Shrink ---- */
+    .ftco_navbar.scrolled {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.95) !important;
+    }
 
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
+    /* ---- Section Headings Enhancement ---- */
+    .heading-section h1.big {
+      font-size: 6rem;
+      color: rgba(255,255,255,0.03);
+      position: absolute;
+      top: -30px;
+      left: 0;
+      right: 0;
+      font-weight: 900;
+      z-index: -1;
+    }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
+    /* ---- Resume Wrap Enhancement ---- */
+    .resume-wrap {
+      border-left: 4px solid #ffbd39;
+    }
+    .resume-wrap:hover {
+      border-left-color: #ff9500;
+    }
 
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
+    /* ---- Experience Tags ---- */
+    .experience-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+    .experience-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      background: rgba(255,189,57,0.12);
+      color: #ffbd39;
+      border: 1px solid rgba(255,189,57,0.2);
+    }
 
+    /* ---- Contact Card Enhancement ---- */
+    .contact-info .box {
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    .contact-info .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(255,189,57,0.15);
+    }
 
-/* project image zoom effect */
+    /* ---- Footer Enhancement ---- */
+    .ftco-footer {
+      background: #000;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
 
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
+    /* ---- Responsive ---- */
+    @media (max-width: 768px) {
+      .tech-card {
+        width: 120px;
+        padding: 20px 15px;
+      }
+      .tech-card img {
+        height: 40px;
+      }
+      .tech-card span {
+        font-size: 0.75rem;
+      }
+      .project-filters {
+        gap: 6px;
+      }
+      .project-filter-btn {
+        padding: 6px 16px;
+        font-size: 0.8rem;
+      }
+      #typing-animation {
+        font-size: 22px;
+      }
+      #dark-mode-toggle,
+      #scroll-to-top {
+        width: 42px;
+        height: 42px;
+        bottom: 20px;
+      }
+      #dark-mode-toggle { left: 20px; }
+      #scroll-to-top { right: 20px; }
+    }
 
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
+    /* ---- Loading State ---- */
+    .skeleton {
+      background: linear-gradient(90deg, #1a1a2e 25%, #2a2a3e 50%, #1a1a2e 75%);
+      background-size: 200% 100%;
+      animation: skeleton-loading 1.5s infinite;
+      border-radius: 4px;
+    }
+    @keyframes skeleton-loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
 
+    /* ---- Active Nav ---- */
+    .navbar-nav .nav-item.active .nav-link span {
+      color: #ffbd39;
+    }
+    .navbar-nav .nav-item.active .nav-link {
+      color: #ffbd39 !important;
+    }
 
-</style>
+    /* ---- Smooth page load ---- */
+    body {
+      opacity: 0;
+      animation: fadeInBody 0.5s ease forwards;
+    }
+    @keyframes fadeInBody {
+      to { opacity: 1; }
+    }
 
-
+    /* ====== LIGHT MODE THEME ====== */
+    body.light-mode {
+      background-color: #f5f5f7 !important;
+      color: #1a1a2e !important;
+    }
+    body.light-mode .ftco-navbar {
+      background: rgba(255,255,255,0.95) !important;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    body.light-mode .ftco-navbar.scrolled {
+      background: rgba(255,255,255,0.98) !important;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+    body.light-mode .navbar-brand,
+    body.light-mode .nav-link span {
+      color: #1a1a2e !important;
+    }
+    body.light-mode .nav-link:hover span {
+      color: #e6a800 !important;
+    }
+    body.light-mode .hero .overlay {
+      background: rgba(245,245,247,0.7) !important;
+    }
+    body.light-mode h1, body.light-mode h2, body.light-mode h3,
+    body.light-mode h4, body.light-mode .heading-section h1.big {
+      color: #1a1a2e !important;
+    }
+    body.light-mode .heading-section h1.big {
+      color: rgba(0,0,0,0.04) !important;
+    }
+    body.light-mode p, body.light-mode li, body.light-mode span {
+      color: #555570 !important;
+    }
+    body.light-mode .title-s {
+      color: #1a1a2e !important;
+    }
+    body.light-mode .resume-wrap {
+      background: rgba(255,255,255,0.8) !important;
+      border: 1px solid rgba(0,0,0,0.08) !important;
+    }
+    body.light-mode .about-mf .box-shadow-full {
+      background: rgba(255,255,255,0.9) !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
+    }
+    body.light-mode #technologies {
+      background-color: #ffffff !important;
+    }
+    body.light-mode .tech-card {
+      background: rgba(0,0,0,0.03) !important;
+      border: 1px solid rgba(0,0,0,0.08) !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    body.light-mode .tech-card:hover {
+      background: rgba(255,255,255,0.95) !important;
+      border-color: rgba(230,168,0,0.3) !important;
+      box-shadow: 0 6px 20px rgba(230,168,0,0.12);
+    }
+    body.light-mode .tech-card span {
+      color: #444460 !important;
+    }
+    body.light-mode .tech-card:hover span {
+      color: #e6a800 !important;
+    }
+    body.light-mode .ftco-section {
+      background: #f5f5f7 !important;
+    }
+    body.light-mode .ftco-footer {
+      background: #ffffff !important;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    body.light-mode .ftco-footer p,
+    body.light-mode .ftco-footer a {
+      color: #666680 !important;
+    }
+    body.light-mode .box {
+      background: rgba(255,255,255,0.8) !important;
+      border: 1px solid rgba(0,0,0,0.06) !important;
+    }
+    body.light-mode #dark-mode-toggle {
+      background: #ffffff !important;
+      border-color: rgba(0,0,0,0.1) !important;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    body.light-mode #dark-mode-toggle:hover {
+      border-color: #e6a800 !important;
+    }
+    body.light-mode .experience-tag,
+    body.light-mode .project-tag {
+      background: rgba(230,168,0,0.1) !important;
+      color: #d48f00 !important;
+      border-color: rgba(230,168,0,0.2) !important;
+    }
+    body.light-mode .btn-github {
+      color: #666680 !important;
+    }
+    body.light-mode .btn-github:hover {
+      color: #e6a800 !important;
+    }
+    body.light-mode .progress {
+      background-color: rgba(0,0,0,0.06) !important;
+    }
+    </style>
   </head>
+
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+      <span class="toggle-icon">🌙</span>
+    </button>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">ABHISHEK PAWAR</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">ABHISHEK PAWAR</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button"
+                data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Abhishek  Pawar</span></h1>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#technologies" class="nav-link"><span>Technologies</span></a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+            <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Engineer  ',
-						'Student  ',
-						'Learner   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>A Data Analyst</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/abhishek-pawar994/" class="btn btn-primary py-3 px-4">Linkedin</a> 
-\		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
+    <!-- ====== HERO SECTION ====== -->
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+                 data-scrollax-parent="true">
+              <div class="one-third js-fullheight order-md-last img"
+                   data-portfolio="hero-image"
+                   style="background-image:url(images/profile-pro.png);">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex align-items-center ftco-animate"
+                   data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span data-portfolio="hero-name">Abhishek Pawar</span></h1>
+                  <span id="typing-animation"></span>
+                  <br><br>
+                  <h2 data-portfolio="hero-subtitle">A Data Analyst</h2>
+                  <p>
+                    <a href="https://www.linkedin.com/in/abhishek-pawar994/"
+                       data-portfolio="linkedin" class="btn btn-primary py-3 px-4">LinkedIn</a>
+                    <a href="https://github.com/Abhishekpawar16"
+                       data-portfolio="github" class="btn btn-white btn-outline-white py-3 px-4"
+                       target="_blank" rel="noopener noreferrer">GitHub</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-
-
+    <!-- ====== ABOUT SECTION ====== -->
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Abhishek Pawar</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p>
-										<!--<p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p>-->
-										<p><span class="title-s">Address: </span> <span>Indore, India</span></p>
-									  </div>
-									</div>
-								  </div>
+      <div class="container">
+        <div class="row">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 col-lg-5 d-flex">
+              <div class="img-about img d-flex align-items-stretch">
+                <div class="overlay">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="images/profile-casual.png" data-portfolio="about-image"
+                             class="img-fluid rounded b-shadow-a" alt="Abhishek Pawar">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">Name: </span> <span data-portfolio="name">Abhishek Pawar</span></p>
+                        <p><span class="title-s">Job Role: </span> <span data-portfolio="title">Data Analyst</span></p>
+                        <p><span class="title-s">Address: </span> <span data-portfolio="location">Indore, India</span></p>
+                      </div>
+                    </div>
+                  </div>
 
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>SQL</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>I am Abhishek Pawar, a passionate and results-driven Data Science Enthusiast with expertise in Machine Learning, Data Analysis, and Web Development. Currently in my final year of BTech at AITR, Indore, I have developed multiple industry-level projects that showcase my skills in data-driven decision-making and predictive analytics.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel, Photography </span></li>
-									
-								</ul>
-							</div>
-						</div>
+                  <div class="skill-mf" id="portfolio-skills">
+                    <!-- Dynamically rendered from data.json -->
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+              <div class="row justify-content-start pb-3">
+                <div class="col-md-12 heading-section ftco-animate">
+                  <h1 class="big">About</h1>
+                  <h2 class="mb-4">About Me</h2>
+                  <p data-portfolio="bio">
+                    I am Abhishek Pawar, a passionate and results-driven Data Science Enthusiast...
+                  </p>
+                  <ul class="about-info mt-4 px-md-0 px-2" id="portfolio-about-info">
+                    <!-- Dynamically rendered from data.json -->
+                  </ul>
+                </div>
+              </div>
 
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="5">5</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/abhishek-pawar994/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+              <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                <div class="text">
+                  <p class="mb-4">
+                    <span class="number" data-portfolio="projects-count" data-number="10">10</span>
+                    <span>+</span>
+                    <span>&nbsp; Projects completed</span>
+                  </p>
+                  <p>
+                    <a href="https://www.linkedin.com/in/abhishek-pawar994/"
+                       data-portfolio="linkedin" class="btn btn-primary py-3 px-3">LinkedIn</a>
+                    <a href="https://github.com/Abhishekpawar16"
+                       data-portfolio="github" class="btn btn-secondary py-3 px-3"
+                       target="_blank" rel="noopener noreferrer">GitHub</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-
-   <section id="technologies" style="background-color: #000; padding: 60px 20px; color: white; text-align: center;">
-		<div class="row justify-content-center pb-5">
-			<div class="col-md-10 heading-section text-center ftco-animate">
-				<h1 class="big big-2">Technologies</h1>
-			  <h2 class="mb-4">Technologies</h2>
-		<p style="color: #7f8fa6; font-size: 1.1em; margin-bottom: 40px;">
-		  The tools and technologies I use to bring ideas to life
-		</p>
-		<div style="
-		  display: flex;
-		  flex-wrap: wrap;
-		  justify-content: center;
-		  gap: 20px;
-		">
-		  <!-- Card 1 -->
-		  <div style="
-			background: #f4f4f4;
-			padding: 30px 20px;
-			border-radius: 15px;
-			width: 150px;
-			text-align: center;
-			box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-		  ">
-			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">Python</span>
-		  </div>
-	  
-		  <!-- Repeat this structure for each technology -->
-		  <div style="background: #f4f4f4; padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Crystal_Clear_app_edu_mathematics.png" alt="Machine Learning" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">Machine Learning</span>
-		  </div>
-	  
-		  <div style="background: #f4f4f4; padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">Django</span>
-		  </div>
-	  
-		  <div style="background: #f4f4f4; padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">SQL</span>
-		  </div>
-	  
-		  <div style="background: #f4f4f4; padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">HTML5</span>
-		  </div>
-	  
-		  <div style="background: #f4f4f4; padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">CSS3</span>
-		  </div>
-	  
-		  <div style="background: #f4f4f4; padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_bi_logo_black_and_white.png" alt="Power BI" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">Power BI</span>
-		  </div>
-	  
-		  <div style="background:rgb(251, 251, 251); padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">Git</span>
-		  </div>
-
-		  <div style="background: #f4f4f4; padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">Selenium</span>
-		  </div>
-
-		  <div style="background: #f4f4f4; padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">Docker</span>
-		  </div>
-
-		  <div style="background: #f4f4f4; padding: 30px 20px; border-radius: 15px; width: 150px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-			<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" style="height: 50px; margin-bottom: 15px;">
-			<span style="font-weight: bold; color: #444;">Jenkins</span>
-		  </div>
-		  
-		</div>
-	  </section>
-	
-	</body>
-	</html>
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
+    <!-- ====== TECHNOLOGIES SECTION ====== -->
+    <section id="technologies">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
+            <h1 class="big big-2">Technologies</h1>
+            <h2 class="mb-4" style="color: #fff;">Technologies</h2>
+            <p style="color: #7f8fa6; font-size: 1.1em; margin-bottom: 40px;">
+              The tools and technologies I use to bring ideas to life
+            </p>
+            <div id="portfolio-technologies">
+              <!-- Dynamically rendered from data.json -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== RESUME SECTION ====== -->
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
-			<p><a href="file:///C:/Users/abhis/Downloads/Portfolio-Website-Template-main/Portfolio-Website-Template-main/images/MY%20Resume.pdf" class="btn btn-primary py-3 px-4">Resume</a> 
-            <p>Data science enthusiast skilled in SQL, Python, machine learning, with experience in analytics, recommendation systems, and project management.</p>
+            <p>
+              <a href="images/resume.pdf" data-portfolio="resume"
+                 class="btn btn-primary py-3 px-4" target="_blank" rel="noopener noreferrer">
+                View Resume
+              </a>
+            </p>
+            <p data-portfolio="resume-summary">
+              Data science enthusiast skilled in SQL, Python, machine learning, with experience in analytics, recommendation systems, and project management.
+            </p>
           </div>
         </div>
 
-		<!--<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2021-Present</span>
-						<h2>Senior Data Analyst</h2>
-						<span class="position">Merkle</span>
-						<p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International. 
-							<ul>
-								<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
-								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
-								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
-							</ul>
-						</p>
-					</div>
+        <!-- Experience -->
+        <div class="row">
+          <h1 class="big-4">Experience</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        <div class="row" id="portfolio-experience">
+          <!-- Dynamically rendered from data.json -->
+        </div>
 
-				</div>
+        <br>
 
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2018-2021</span>
-						<h2>Senior Data Analyst</h2>
-						<span class="position">iQuanti</span>
-						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
-							<ul>
-								<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
-								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
-								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
-							</ul>
-						</p>
-					</div> -->
+        <!-- Certifications -->
+        <div class="row">
+          <h1 class="big-4">Certifications</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        <div class="row" id="portfolio-certifications">
+          <!-- Dynamically rendered from data.json -->
+        </div>
 
-				</div>
-			</div>
+        <br><br>
 
-		<br>
-		<br>
+        <!-- Education -->
+        <div class="row">
+          <h1 class="big-4">Education</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        <div class="row" id="portfolio-education">
+          <!-- Dynamically rendered from data.json -->
+        </div>
 
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2021-2025</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">Rajiv gandhi proudyogiki vishwavidyalaya</span>
-    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2020-2021</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">Vidya Bhumi Public School</span>
-    					<!--  <p class="mt-4">Grade: First class distinction.</p> -->
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="file:///C:/Users/abhis/Downloads/Portfolio-Website-Template-main/Portfolio-Website-Template-main/images/MY%20Resume.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p>
+              <a href="images/resume.pdf" data-portfolio="resume"
+                 class="btn btn-primary py-4 px-5" target="_blank" rel="noopener noreferrer">
+                Download CV
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-   
-
+    <!-- ====== PROJECTS SECTION ====== -->
     <section class="ftco-section" id="project-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
@@ -484,130 +712,52 @@
             <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
           </div>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Abhishekpawar16/number-guessing-game" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/Abhishekpawar16/number-guessing-game">🧑‍💻 Personal Portfolio</a></h3>
-                <p>Designed and developed a personal portfolio website to showcase my projects, skills, and experience. The site includes responsive design, project highlights, contact details, and a clean user-friendly interface to reflect my personal brand and technical expertise.
-
-.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Abhishekpawar16/Gz-Fashion-Recommendation-System" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Abhishekpawar16/Gz-Fashion-Recommendation-System">🔹G-Z Fashion Recommendation System </a></h3>
-                <p>Built a fashion recommendation system using Python and OpenCV to suggest outfits based on user preferences and visual features.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/Abhishekpawar16/Car-sales" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Abhishekpawar16/Car-sales">Power BI Sales dashboard Project for Beginners</a></h3>
-                <p>An interactive Power BI dashboard to analyze car sales trends, revenue, and customer demographics. It helps businesses track sales performance and make data-driven decisions.</p>
-              </div>
-            </div>
-          </div>
+        <!-- Project Filters -->
+        <div class="project-filters">
+          <button class="project-filter-btn active" data-filter="all">All</button>
+          <button class="project-filter-btn" data-filter="analytics">Analytics</button>
+          <button class="project-filter-btn" data-filter="ml">Machine Learning</button>
+          <button class="project-filter-btn" data-filter="web">Web Dev</button>
         </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<!--<div class="row d-flex justify-content-center">
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
-				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
-				</div>
-			  </div>
-			</div> -->
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/Abhishekpawar16/number-guessing-game" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/Abhishekpawar16/number-guessing-game">🎮 Number Guessing Game</a></h3>
-				  <p>>Built an interactive number guessing game in Python with AI-powered hints and multiple difficulty levels.</p>
-				</div>
-			  </div>
-			</div>
-		 </div>
-	  </div>
+
+        <div class="row d-flex" id="portfolio-projects">
+          <!-- Dynamically rendered from data.json -->
+        </div>
+      </div>
     </section>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    <!-- ====== COUNTER / ACHIEVEMENTS SECTION ====== -->
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
       <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="5">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="5">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Linkedin Connections</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
-              </div>
+        <div class="row d-md-flex align-items-center">
+          <!-- Dynamically rendered from data.json -->
+        </div>
+      </div>
+
+      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+        <div class="row justify-content-center">
+          <div class="col-md-7 ftco-animate text-center">
+            <h2>More projects on <span>GitHub</span></h2>
+            <div class="heading">
+              <h4>I love to solve business problems &amp; uncover hidden data stories</h4>
+              <br>
+              <p>
+                <a href="https://github.com/Abhishekpawar16" data-portfolio="github"
+                   class="btn btn-primary py-3 px-5" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/Abhishekpawar16" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+    </section>
 
-
-
+    <!-- ====== CONTACT SECTION ====== -->
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
+        <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
             <h2 class="mb-4">Contact Me</h2>
@@ -617,99 +767,102 @@
 
         <div class="row d-flex contact-info mb-5">
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Indore, India</p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <p data-portfolio="location">Indore, India</p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+ 91 7566264476 </a></p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p><a href="tel:+917566264476" data-portfolio="phone-link"><span data-portfolio="phone">+91 7566264476</span></a></p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">Abhishekkharpuse994@gmail.com</a></p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email Address</h3>
+              <p><a href="mailto:Abhishekkharpuse994@gmail.com" data-portfolio="email-link">Abhishekkharpuse994@gmail.com</a></p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">Download Resume</h3>
+              <p><a href="images/resume.pdf" data-portfolio="resume" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a></p>
+            </div>
           </div>
+        </div>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/11pIkkUSEfMTnV_KeVSuwevx43xuLUBQRbuMhYZhjDnU/edit" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					<!--<li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li>-->
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/abhishek-pawar994/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://x.com/AbhishekKharpu4?s=09"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100023493798818"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/i_.m_.abhix/?hl=en"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+        <div class="container">
+          <br><br>
+          <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+              <h2>Have a <span>Question?</span>
+                <a href="https://docs.google.com/forms/d/11pIkkUSEfMTnV_KeVSuwevx43xuLUBQRbuMhYZhjDnU/edit"
+                   data-portfolio="contact-form" class="btn btn-primary py-3 px-5">Click Here</a>
+              </h2>
+            </div>
+          </div>
+          <br>
+          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0"
+              id="portfolio-social">
+            <!-- Dynamically rendered from data.json -->
+          </ul>
+          <br>
+        </div>
+      </div>
+    </section>
 
-
- 
-	
+    <!-- ====== FOOTER ====== -->
     <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="" target="_blank">Abhishek</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+              All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i>
+              by <a href="https://github.com/Abhishekpawar16" target="_blank" rel="noopener noreferrer">Abhishek</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+    <!-- Loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4"
+                stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="lib/typed/typed.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
   </body>
 </html>
