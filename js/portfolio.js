@@ -293,25 +293,35 @@ function animateCounter(el, target) {
 
 // ---- Re-init Waypoint Animations for Dynamic Content ----
 function reInitAnimations() {
-  // The main.js contentWayPoint() sets up jQuery Waypoints on .ftco-animate elements.
-  // But it runs BEFORE portfolio.js renders dynamic content, so new elements stay at opacity:0.
-  // Solution: Re-run the waypoint setup for newly added .ftco-animate elements that
-  // don't have ftco-animated class yet.
-  if (typeof $ !== 'undefined' && typeof $.fn.waypoint !== 'undefined') {
-    $('.ftco-animate:not(.ftco-animated)').waypoint(function(direction) {
-      if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
-        var effect = $(this.element).data('animate-effect');
-        if (effect === 'fadeIn') {
-          $(this.element).addClass('fadeIn ftco-animated');
-        } else if (effect === 'fadeInLeft') {
-          $(this.element).addClass('fadeInLeft ftco-animated');
-        } else if (effect === 'fadeInRight') {
-          $(this.element).addClass('fadeInRight ftco-animated');
-        } else {
-          $(this.element).addClass('fadeInUp ftco-animated');
+  // main.js contentWayPoint() sets up jQuery Waypoints on .ftco-animate elements,
+  // but it runs BEFORE portfolio.js renders dynamic content, so new elements stay at opacity:0.
+  // Solution: Use IntersectionObserver to animate dynamically rendered .ftco-animate elements
+  // when they scroll into view.
+  const unanimated = document.querySelectorAll('.ftco-animate:not(.ftco-animated)');
+  if (unanimated.length === 0) return;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const effect = el.dataset.animateEffect;
+          if (effect === 'fadeIn') el.classList.add('fadeIn');
+          else if (effect === 'fadeInLeft') el.classList.add('fadeInLeft');
+          else if (effect === 'fadeInRight') el.classList.add('fadeInRight');
+          else el.classList.add('fadeInUp');
+          el.classList.add('ftco-animated');
+          observer.unobserve(el);
         }
-      }
-    }, { offset: '95%' });
+      });
+    }, { threshold: 0.05 });
+
+    unanimated.forEach(el => observer.observe(el));
+  } else {
+    // Fallback: just show everything immediately
+    unanimated.forEach(el => {
+      el.classList.add('fadeInUp', 'ftco-animated');
+    });
   }
 }
 
