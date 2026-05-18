@@ -7,9 +7,12 @@
     "phone": "+91 7566264476",
     "email": "Abhishekkharpuse994@gmail.com",
     "bio": "I am Abhishek Pawar, a passionate and results-driven Data Analyst with hands-on experience in data analytics and business intelligence. Currently working at Ingenero Technologies as a Data Analyst Intern, I specialize in analyzing complex datasets, building automated workflows using IBM BPM, and generating actionable business insights for process optimization. I thrive on transforming raw data into clear, data-driven decisions that create measurable impact across any domain.",
+    "heroDescription": "Transforming complex data into actionable insights. Specialized in data analytics, workflow automation, and data-driven decision-making across diverse domains.",
+    "aboutSubtitle": "Data Analytics & ML Projects",
     "resumeLink": "images/resume.pdf",
     "linkedin": "https://www.linkedin.com/in/abhishek-pawar994/",
     "github": "https://github.com/Abhishekpawar16",
+    "instagram": "https://www.instagram.com/i_.m_.abhix/",
     "heroImage": "images/profile-pro.png",
     "aboutImage": "images/profile-casual.png",
     "typingTexts": [
@@ -43,27 +46,28 @@
   ],
 
   "technologies": [
-    { "name": "Python", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-    { "name": "SQL", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-    { "name": "Power BI", "icon": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_bi_logo_black_and_white.png" },
-    { "name": "Scikit-learn", "icon": "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
-    { "name": "Pandas", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
-    { "name": "NumPy", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
-    { "name": "PostgreSQL", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-    { "name": "RapidMiner", "icon": "https://upload.wikimedia.org/wikipedia/commons/3/3b/RapidMiner_Logo.svg" },
-    { "name": "IBM BPM", "icon": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
-    { "name": "Git", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-    { "name": "Matplotlib", "icon": "https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" },
-    { "name": "Jupyter", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
-    { "name": "HTML5", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-    { "name": "CSS3", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" }
+    { "name": "Python", "color": "#3776AB" },
+    { "name": "SQL", "color": "#336791" },
+    { "name": "Power BI", "color": "#F2C811" },
+    { "name": "Scikit-learn", "color": "#F7931E" },
+    { "name": "Pandas", "color": "#150458" },
+    { "name": "NumPy", "color": "#013243" },
+    { "name": "PostgreSQL", "color": "#336791" },
+    { "name": "RapidMiner", "color": "#F7931E" },
+    { "name": "IBM BPM", "color": "#054ADA" },
+    { "name": "Git", "color": "#F05032" },
+    { "name": "Matplotlib", "color": "#11557C" },
+    { "name": "Jupyter", "color": "#F37626" },
+    { "name": "HTML5", "color": "#E34F26" },
+    { "name": "CSS3", "color": "#1572B6" }
   ],
 
   "experience": [
     {
-      "date": "Aug 2025 – Present",
+      "date": "Aug 2025 - Present",
       "role": "Data Analyst (Intern)",
-      "company": "Ingenero Technologies, Mumbai, India",
+      "company": "Ingenero Technologies",
+      "location": "Mumbai, India",
       "tags": ["SQL Server", "Power BI", "Python", "IBM BPM", "RapidMiner"],
       "description": [
         "Analyzed large-scale business and operational data for petroleum, gas, and energy sector clients using Microsoft SQL Server and Python, enabling data-driven decision making.",
@@ -74,9 +78,10 @@
       ]
     },
     {
-      "date": "2022 – 2025",
+      "date": "2022 - 2025",
       "role": "Core Team Member",
       "company": "Data Science & Analytics Club, AITR Indore",
+      "location": "Indore, India",
       "tags": ["Leadership", "Event Management", "Technical Communication", "Community Engagement"],
       "description": [
         "Actively participated in multiple national-level hackathons, enhancing problem-solving, innovation, and teamwork skills.",
@@ -111,19 +116,19 @@
 
   "education": [
     {
-      "date": "2021 – 2025",
+      "date": "2021 - 2025",
       "degree": "Bachelor of Technology",
       "institution": "Acropolis Institute of Technology and Research, Indore",
       "detail": "Computer Science (Data Science)"
     },
     {
-      "date": "2020 – 2021",
+      "date": "2020 - 2021",
       "degree": "Higher Secondary School (12th)",
       "institution": "CBSE",
       "detail": "Science Stream with Mathematics"
     },
     {
-      "date": "2018 – 2019",
+      "date": "2018 - 2019",
       "degree": "Secondary School (10th)",
       "institution": "CBSE",
       "detail": ""
@@ -141,7 +146,7 @@
       "tags": ["IBM BPM", "SQL Server", "Power BI", "Python", "RapidMiner"]
     },
     {
-      "title": "GreenDrive Analytics — EV Sustainability BI Platform",
+      "title": "GreenDrive Analytics -- EV Sustainability BI Platform",
       "category": "analytics",
       "image": "images/proj-greendrive.png",
       "link": "https://github.com/Abhishekpawar16/GreenDrive-Analytics",
@@ -150,7 +155,7 @@
       "tags": ["Python", "PostgreSQL", "Power BI", "Prophet", "ETL", "DAX"]
     },
     {
-      "title": "Sales Performance Dashboard — Power BI",
+      "title": "Sales Performance Dashboard -- Power BI",
       "category": "analytics",
       "image": "images/proj-sales.png",
       "link": "https://github.com/Abhishekpawar16/Car-sales",
@@ -168,7 +173,7 @@
       "tags": ["Python", "OpenCV", "ML", "Recommendation System"]
     },
     {
-      "title": "Music Store Data Analysis — SQL",
+      "title": "Music Store Data Analysis -- SQL",
       "category": "analytics",
       "image": "images/proj-music.png",
       "link": "https://github.com/Abhishekpawar16/Music-Store-Data-Analysis-using-SQL",
@@ -192,10 +197,10 @@
       "link": "https://abhishekpawar16.github.io/Abhishek-Portfolio/",
       "github": "https://github.com/Abhishekpawar16/Abhishek-Portfolio",
       "description": "Designed and developed a personal portfolio website to showcase projects, skills, and experience. Features responsive design, dynamic content loading from JSON, project filtering, dark mode, and a clean user-friendly interface.",
-      "tags": ["HTML", "CSS", "JavaScript", "Bootstrap"]
+      "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]
     },
     {
-      "title": "StockMate — Stock Analysis Platform",
+      "title": "StockMate -- Stock Analysis Platform",
       "category": "analytics",
       "image": "images/proj-stockmate.png",
       "link": "https://github.com/Abhishekpawar16/StockMate",
@@ -205,17 +210,17 @@
     }
   ],
 
-  "achievements": [
-    { "label": "Achievements", "value": 5 },
-    { "label": "Projects", "value": 8 },
-    { "label": "LinkedIn Connections", "value": 500 },
-    { "label": "GitHub Repos", "value": 11 }
+  "stats": [
+    { "icon": "briefcase", "label": "Projects Completed", "value": 10 },
+    { "icon": "award", "label": "Achievements", "value": 5 },
+    { "icon": "users", "label": "LinkedIn Connections", "value": 500 },
+    { "icon": "code", "label": "GitHub Repos", "value": 11 }
   ],
 
   "socialLinks": [
-    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/abhishek-pawar994/", "icon": "icon-linkedin2" },
-    { "platform": "GitHub", "url": "https://github.com/Abhishekpawar16", "icon": "icon-github2" },
-    { "platform": "Instagram", "url": "https://www.instagram.com/i_.m_.abhix/", "icon": "icon-instagram" }
+    { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/abhishek-pawar994/" },
+    { "platform": "GitHub", "url": "https://github.com/Abhishekpawar16" },
+    { "platform": "Instagram", "url": "https://www.instagram.com/i_.m_.abhix/" }
   ],
 
   "contactForm": "https://docs.google.com/forms/d/11pIkkUSEfMTnV_KeVSuwevx43xuLUBQRbuMhYZhjDnU/edit"
