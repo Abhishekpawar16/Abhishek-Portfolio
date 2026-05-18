@@ -164,6 +164,11 @@ function renderAll() {
   if (typeof AOS !== 'undefined') {
     AOS.refresh();
   }
+
+  // Re-init waypoint animations for dynamically rendered content
+  // main.js contentWayPoint() only runs on page load before dynamic content exists,
+  // so we need to re-trigger it for new .ftco-animate elements
+  reInitAnimations();
 }
 
 // ---- Render Projects with Filter ----
@@ -195,6 +200,9 @@ function renderProjects(filter) {
 
   // Re-init AOS for new elements
   if (typeof AOS !== 'undefined') AOS.refresh();
+
+  // Re-init waypoint animations for filtered project cards
+  reInitAnimations();
 }
 
 // ---- Project Filter Buttons ----
@@ -281,6 +289,30 @@ function animateCounter(el, target) {
       el.textContent = Math.floor(current);
     }
   }, 20);
+}
+
+// ---- Re-init Waypoint Animations for Dynamic Content ----
+function reInitAnimations() {
+  // The main.js contentWayPoint() sets up jQuery Waypoints on .ftco-animate elements.
+  // But it runs BEFORE portfolio.js renders dynamic content, so new elements stay at opacity:0.
+  // Solution: Re-run the waypoint setup for newly added .ftco-animate elements that
+  // don't have ftco-animated class yet.
+  if (typeof $ !== 'undefined' && typeof $.fn.waypoint !== 'undefined') {
+    $('.ftco-animate:not(.ftco-animated)').waypoint(function(direction) {
+      if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+        var effect = $(this.element).data('animate-effect');
+        if (effect === 'fadeIn') {
+          $(this.element).addClass('fadeIn ftco-animated');
+        } else if (effect === 'fadeInLeft') {
+          $(this.element).addClass('fadeInLeft ftco-animated');
+        } else if (effect === 'fadeInRight') {
+          $(this.element).addClass('fadeInRight ftco-animated');
+        } else {
+          $(this.element).addClass('fadeInUp ftco-animated');
+        }
+      }
+    }, { offset: '95%' });
+  }
 }
 
 // ---- Dark Mode Toggle ----
